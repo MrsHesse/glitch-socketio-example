@@ -1,0 +1,120 @@
+/* Fix user-agent */
+
+body { 
+  margin: 0; 
+  padding-bottom: 3rem; 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+}
+
+
+ul {
+  list-style: none;
+  word-wrap: break-word;
+}
+
+/* Pages */
+.pages {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.page {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+/* Login Page */
+
+.login.page {
+  background-color: #000;
+}
+
+.login.page .form {
+  height: 100px;
+  margin-top: -100px;
+  position: absolute;
+
+  text-align: center;
+  top: 50%;
+  width: 100%;
+}
+
+.login.page .form .usernameInput {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  outline: none;
+  padding-bottom: 15px;
+  text-align: center;
+  width: 400px;
+}
+
+.login.page .title {
+  font-size: 200%;
+}
+
+#usernameInput {
+  font-size: 200%;
+  letter-spacing: 3px;
+  color: #444;
+  font-weight: 100;
+  text-align:center;
+}
+
+.login.page .title {
+  color: #fff;
+  font-weight: 100;
+}
+
+/* Chat page */
+
+#loginpage{
+  display:block;
+}
+
+#notespage{
+  display:none;
+}
+
+#form { 
+  background: rgba(0, 0, 0, 0.15); 
+  padding: 0.25rem; 
+  position: fixed; 
+  bottom: 0; left: 0; right: 0; 
+  display: flex; 
+  height: 3rem; 
+  box-sizing: border-box; 
+  backdrop-filter: blur(10px); 
+}
+      
+#noteText { 
+  border: none; 
+  padding: 0 1rem; 
+  flex-grow: 1; 
+  border-radius: 2rem; 
+  margin: 0.25rem; 
+}
+
+#noteText { 
+  outline: none; 
+}
+
+
+#notes { 
+  list-style-type: none;
+  margin: 0; 
+  padding: 0; 
+}
+
+#notes > li { 
+  padding: 0.5rem 1rem; 
+}
+
+#notes > li:nth-child(odd) { 
+  background: #efefef; 
+}
+
+
