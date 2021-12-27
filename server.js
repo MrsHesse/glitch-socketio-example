@@ -47,14 +47,20 @@ io.on('connection', (socket) => {
 // to all the other clients.
 io.on('connection', (socket) => {
   socket.on('new note', msg => {
+    console.log("emit new note :",msg);
+    
+  
     io.emit("new note", msg)
   });
   
   socket.on('add user', function (username) {
+    
     //if (addedUser) return;
-
+    console.log("add user :", )
     // we store the username in the socket session for this client
     socket.username = username;
+    
+    console.log("add user :", socket.username)
     
     ++numUsers;
     

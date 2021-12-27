@@ -19,7 +19,7 @@ var usernametext = document.getElementById('usernameInput');
 notetext.addEventListener('change', function(e){
     e.preventDefault();
     if( notetext.value){
-      socket.emit('new note', notetext.value);
+      socket.emit('new note', {"from":username, "note":notetext.value});
       notetext.value="";
     }
 });
@@ -69,6 +69,10 @@ function switchToNotesPage(){
 socket.on('new note', function (msg){
   var item = document.createElement('li');
   item.textContent = msg;
+  item.innerHTML = "<span style='font-style: italic;font-weight: bold;'>" + msg.from + " >></span>";
+  item.innerHTML = item.innerHTML + "  " + msg.note;
+  console.log("client new node message received");
+  console.log(item.innerHTML);
   notes.appendChild(item);
   window.scrollTo(0, document.body.scrollHeight);
 });
